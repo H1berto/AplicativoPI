@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.rickt.fam.MainActivity"
+    tools:showIn="@layout/app_bar_main2"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:background="@drawable/shape_button_home"
+        android:elevation="8dp"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Olá, Henrique !"
+            android:textColor="@color/colorText_icons"
+            android:textSize="25dp"
+            android:textStyle="bold"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="!!! Prova dia 5/06/2018"
+            android:textColor="@color/colorText_icons"
+            android:textSize="16dp"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="!! Apresentação dia 11/06/2018"
+            android:textColor="@color/colorText_icons"
+            android:textSize="16dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="! Entrega de atividade dia 13/06/2018"
+            android:textColor="@color/colorText_icons"
+            android:textSize="16dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Professor CID enviou uma mensagem."
+            android:textColor="#000"
+            android:textSize="16dp"
+            />
+
+    </LinearLayout>
+
+    <TextView
+        android:gravity="center"
+        android:layout_marginTop="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Materiais recomendados para você:"
+        android:textColor="@color/colorAccent"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:layout_marginBottom="16dp"/>
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:background="@drawable/shape_button_home"
+        android:elevation="8dp"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <TextView
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Curso de Desenvolvimento Android "
+            android:textColor="@color/colorText_icons"
+            android:textSize="25dp"
+            android:textStyle="bold"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Curso completo de desenvolvimento Android; Crie na prática apps como: Instagram, Flappy Bird, WhatsApp e muito mais."
+            android:textColor="@color/colorText_icons"
+            android:textSize="16dp"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="O que aprenderei?
+Aprenda a criar apps reais que podem ser mostrados para amigos ou usados em uma entrevista de trabalho.
+Ofereça seu serviço de desenvolvedor Android para empresas.
+Aprenda a construir aplicações Android com os principais recursos de apps famosos como: Flappy Bird, Instagram e WhatsApp."
+            android:textColor="#000"
+            android:textSize="16dp"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="Vídeo:"
+            android:textColor="@color/colorText_icons"
+            android:textSize="20dp"
+            android:gravity="center"/>
+        <WebView
+            android:id="@+id/webViewToSetVideo"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"></WebView>
+    </LinearLayout>
+
+
+</ScrollView>
+
+</LinearLayout>
