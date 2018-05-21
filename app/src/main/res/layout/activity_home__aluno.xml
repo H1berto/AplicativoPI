@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.rickt.fam.Home_AlunoActivity"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/side_nav_bar"
+        android:padding="8dp">
+
+
+        <ImageView
+            android:layout_width="90dp"
+            android:layout_height="110dp"
+            android:background="@drawable/fototeste"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:textSize="18dp"
+                android:textColor="@color/colorText_icons"
+                android:layout_marginLeft="16dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Henrique Menezes da Paixão"
+                android:textStyle="bold"/>
+            <TextView
+            android:textSize="18dp"
+            android:textColor="@color/colorText_icons"
+            android:layout_marginLeft="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="022228"/>
+            <TextView
+                android:textSize="18dp"
+                android:textColor="@color/colorText_icons"
+                android:layout_marginLeft="16dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ciência da computação"
+                />
+            <TextView
+                android:textSize="18dp"
+                android:textColor="@color/colorText_icons"
+                android:layout_marginLeft="16dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3° Semestre"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_marginTop="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Aulas"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:background="@drawable/side_nav_bar"
+            android:textColor="@color/colorText_icons"/>
+    </LinearLayout>
+
+<LinearLayout
+    android:background="#72efefe9"
+    android:layout_gravity="center"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+    <LinearLayout
+        android:layout_marginTop="16dp"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Segunda-feira"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:textColor="#000"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text="Terça-feira"
+            android:textColor="#000"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+        <TextView
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Quarta-feira"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:textColor="#000"/>
+        <TextView
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Quinta-feira"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:textColor="#000"/>
+        <TextView
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sexta-feira"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:textColor="#000"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="8dp"
+       android:layout_marginLeft="8dp"
+        android:layout_width="5dp"
+        android:layout_height="match_parent"
+        android:background="@drawable/side_nav_bar">
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:elevation="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Eng. de software "
+            android:textStyle="italic"
+            android:textSize="20dp"
+            android:textColor="#000"
+            android:layout_marginBottom="8dp"
+            />
+
+        <TextView
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Projeto integrado "
+            android:textStyle="italic"
+            android:textSize="20dp"
+            android:textColor="#000"
+            android:layout_marginBottom="8dp"/>
+
+        <TextView
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Orientação a objeto "
+            android:textStyle="italic"
+            android:textSize="20dp"
+            android:textColor="#000"
+            android:layout_marginBottom="8dp"/>
+
+        <TextView
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Eng. de software "
+            android:textStyle="italic"
+            android:textSize="20dp"
+            android:textColor="#000"
+            android:layout_marginBottom="8dp"/>
+
+        <TextView
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Orientação a objeto "
+            android:textStyle="italic"
+            android:textSize="20dp"
+            android:textColor="#000"/>
+
+    </LinearLayout>
+</LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="@drawable/side_nav_bar"
+        android:layout_marginBottom="10dp">
+
+    </LinearLayout>
+
+    <TextView
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:textColor="#000"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:text="Recomendados para você:"/>
+
+    <LinearLayout
+
+        android:background="@drawable/side_nav_bar"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/imgViewClick"
+            android:layout_marginLeft="10dp"
+            android:layout_width="75dp"
+            android:layout_height="95dp"
+            android:background="@drawable/capa2"/>
+        <ImageView
+            android:layout_marginLeft="10dp"
+            android:layout_width="75dp"
+            android:layout_height="95dp"
+            android:background="@drawable/capa3"/>
+
+    </LinearLayout>
+
+</LinearLayout>

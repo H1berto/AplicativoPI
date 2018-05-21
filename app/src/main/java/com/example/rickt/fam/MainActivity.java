@@ -89,6 +89,9 @@ public class MainActivity extends AppCompatActivity
 
 		if (id == R.id.nav_home_aluno) {
 
+			Intent intent = new Intent (MainActivity.this, Home_AlunoActivity.class);
+			startActivity (intent);
+
 		} else if (id == R.id.nav_aulas) {
 
 			Intent intent = new Intent (MainActivity.this, AulasActivity.class);
@@ -103,6 +106,8 @@ public class MainActivity extends AppCompatActivity
 		} else if (id == R.id.nav_send) {
 
 		} else if (id == R.id.nav_presenca) {
+
+			
 
 		}
 
