@@ -107,7 +107,11 @@ public class MainActivity extends AppCompatActivity
 
 		} else if (id == R.id.nav_presenca) {
 
-			
+		}
+		else if (id == R.id.nav_classes) {
+
+			Intent intent = new Intent (MainActivity.this, TurmasActivity.class);
+			startActivity (intent);
 
 		}
 

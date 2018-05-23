@@ -16,23 +16,21 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".LoginActivity"
-            android:label="Login FAM" >
+            android:name=".MainActivity"
+            android:label="FAM"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".AulasActivity" />
+        <activity android:name=".VerAtividadesActivity" />
+        <activity android:name=".Home_AlunoActivity" />
+        <activity android:name=".LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity
-            android:name=".MainActivity"
-            android:label="FAM"
-            android:theme="@style/AppTheme.NoActionBar">
-        </activity>
-        <activity android:name=".AulasActivity" />
-        <activity android:name=".VerAtividadesActivity" />
-        <activity android:name=".Home_AlunoActivity"></activity>
+        <activity android:name=".TurmasActivity" />
+        <activity android:name=".Turma1Activity"></activity>
     </application>
 
 </manifest>

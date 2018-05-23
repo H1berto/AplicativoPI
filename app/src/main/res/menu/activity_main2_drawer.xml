@@ -11,6 +11,12 @@
             android:title="Área do aluno"/>
 
         <item
+            android:id="@+id/nav_classes"
+            android:icon="@drawable/ic_classes"
+            android:title="Turmas"/>
+
+
+        <item
             android:id="@+id/nav_presenca"
             android:icon="@drawable/ic_faltas_aluno"
             android:title="Notas e faltas" />
