@@ -1,4 +1,4 @@
-package com.example.rickt.fam;
+package com.example.rickt.fam.Activity;
 
 import android.content.Intent;
 import android.media.Image;
@@ -7,6 +7,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+
+import com.example.rickt.fam.R;
 
 public class Home_AlunoActivity extends AppCompatActivity {
 
