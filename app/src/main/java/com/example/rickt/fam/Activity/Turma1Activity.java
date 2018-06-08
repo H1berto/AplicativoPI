@@ -21,6 +21,10 @@ public class Turma1Activity extends AppCompatActivity {
 	private RecyclerAdapterCadastro recyclerAdapterCadastro;
 	private Button buttonCadastrar;
 
+	String nomeToSet;
+	String emailToSet;
+	String raToSet;
+
 	@Override
 	protected void onCreate (Bundle savedInstanceState) {
 		super.onCreate (savedInstanceState);
@@ -34,6 +38,7 @@ public class Turma1Activity extends AppCompatActivity {
 
 				Intent intent = new Intent (Turma1Activity.this, CadastroDeAlunoActivity.class);
 				startActivity (intent);
+				finish ();
 			}
 		});
 
@@ -46,7 +51,15 @@ public class Turma1Activity extends AppCompatActivity {
 
 		mRecyclerView.addItemDecoration (new DividerItemDecoration (this,DividerItemDecoration.VERTICAL));
 
-		recyclerAdapterCadastro.addAluno (new CadastroAluno ("Aluno","Email@aluno.com.br","000000"));
+		Intent it = getIntent ();
+
+		nomeToSet = it.getStringExtra ("nomeAluno");
+		emailToSet = it.getStringExtra ("emailAluno");
+		raToSet = it.getStringExtra ("raAluno");
+
+		recyclerAdapterCadastro.addAluno(new CadastroAluno (nomeToSet,emailToSet,raToSet));
+		recyclerAdapterCadastro.notifyDataSetChanged ();
+
 
 	}
 }

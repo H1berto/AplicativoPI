@@ -1,9 +1,81 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    android:padding="16dp"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.rickt.fam.Activity.CadastroDeAlunoActivity">
 
-</android.support.constraint.ConstraintLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nome:"
+        android:textColor="@color/colorAccent"
+        android:textStyle="bold"/>
+    
+    <EditText
+        android:id="@+id/etNomeCadastroAluno"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:inputType="text"
+        android:layout_marginBottom="8dp"
+        android:maxLines="1"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="R.A:"
+        android:textColor="@color/colorAccent"
+        android:textStyle="bold"/>
+
+    <EditText
+        android:maxLines="1"
+        android:maxLength="6"
+        android:inputType="number"
+        android:id="@+id/etRACadastroAluno"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginBottom="8dp"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="E-mail:"
+        android:textColor="@color/colorAccent"
+        android:textStyle="bold"/>
+
+    <EditText
+        android:inputType="textEmailAddress"
+        android:id="@+id/etEmailCadastroAluno"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:maxLines="1"
+        android:layout_marginBottom="8dp"
+        />
+
+    <Button
+        android:id="@+id/btnCadastrarNovoAlunoTelaAluno"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="CADASTRAR"
+        android:background="@drawable/shape_button_home"
+        android:textColor="#fff"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        />
+
+    <TextView
+        android:id="@+id/msgErroTelaCadastroAluno"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Erro verifique as informações e tente novamente"
+        android:textSize="14sp"
+        android:gravity="center"
+        android:textColor="#e20707"
+        android:visibility="gone"/>
+
+</LinearLayout>
