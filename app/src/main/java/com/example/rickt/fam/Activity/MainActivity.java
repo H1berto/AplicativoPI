@@ -1,5 +1,6 @@
 package com.example.rickt.fam.Activity;
 
+import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -13,6 +14,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import android.widget.EditText;
+import android.widget.TextView;
 
 import com.example.rickt.fam.R;
 
@@ -20,6 +23,14 @@ public class MainActivity extends AppCompatActivity
 		implements NavigationView.OnNavigationItemSelectedListener {
 
 	private WebView webView;
+	private TextView setName;
+
+	private String nomeUser;
+	private String emailUser;
+	private String raUser;
+	private Boolean isAlunoUser;
+
+	private Dialog dialog;
 
 	@Override
 	protected void onCreate (Bundle savedInstanceState) {
@@ -28,6 +39,14 @@ public class MainActivity extends AppCompatActivity
 		Toolbar toolbar = (Toolbar) findViewById (R.id.toolbar);
 		setSupportActionBar (toolbar);
 
+		Intent it = getIntent ();
+
+		raUser = it.getStringExtra ("raUser");
+		emailUser = it.getStringExtra ("emailUser");
+		nomeUser = it.getStringExtra ("nomeUser");
+		isAlunoUser = it.getBooleanExtra ("isAluno", false);
+
+		setName = (TextView) findViewById (R.id.textViewBemVindoUser);
 		webView = (WebView) findViewById (R.id.webViewToSetVideo);
 		webView.setWebViewClient (new MyBrowser());
 
@@ -45,10 +64,20 @@ public class MainActivity extends AppCompatActivity
 
 		NavigationView navigationView = (NavigationView) findViewById (R.id.nav_view);
 		navigationView.setNavigationItemSelectedListener (this);
+
+		if (isAlunoUser == true){
+			setName.setText ("Olá "+nomeUser+" !");
+		}else {
+			setName.setText ("Olá Professor(a), "+nomeUser+" !");
+		}
+
 	}
 
 	@Override
 	public void onBackPressed () {
+
+		finish ();
+
 		DrawerLayout drawer = (DrawerLayout) findViewById (R.id.drawer_layout);
 		if (drawer.isDrawerOpen (GravityCompat.START)) {
 			drawer.closeDrawer (GravityCompat.START);
@@ -108,8 +137,17 @@ public class MainActivity extends AppCompatActivity
 		}
 		else if (id == R.id.nav_classes) {
 
-			Intent intent = new Intent (MainActivity.this, TurmasActivity.class);
-			startActivity (intent);
+			if (isAlunoUser == false){
+
+				Intent intent = new Intent (MainActivity.this, TurmasActivity.class);
+				startActivity (intent);
+			}else {
+				dialog = new Dialog (this);
+				dialog.setContentView (R.layout.custom_dialog);
+				dialog.setCancelable (false);
+				dialog.show ();
+			}
+
 
 		}
 

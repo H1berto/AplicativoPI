@@ -31,7 +31,8 @@
         </activity>
         <activity android:name=".Activity.TurmasActivity" />
         <activity android:name=".Activity.Turma1Activity" />
-        <activity android:name=".Activity.CadastroDeAlunoActivity"></activity>
+        <activity android:name=".Activity.CadastroDeAlunoActivity" />
+        <activity android:name=".Activity.CadastroUsuarioActivity"></activity>
     </application>
 
 </manifest>
