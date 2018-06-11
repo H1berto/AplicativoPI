@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.rickt.fam.Activity.EnviarMensagemActivity"
+    android:padding="8dp">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Selecione a turma:"
+        android:layout_marginBottom="8dp"
+        android:textColor="@color/colorAccent"
+        android:textStyle="bold"/>
+    <Spinner
+        android:id="@+id/mandarMensagemTurma"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginBottom="16dp"></Spinner>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Selecione o aluno:"
+        android:layout_marginBottom="8dp"
+        android:textColor="@color/colorAccent"
+        android:textStyle="bold"/>
+    <Spinner
+        android:id="@+id/mandarMensagemAluno"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginBottom="16dp"></Spinner>
+
+    <TextView
+        android:id="@+id/mensagemParaQuem"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:visibility="gone"
+        android:layout_marginBottom="8dp"
+        android:textColor="#000"
+        android:textStyle="bold"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <EditText
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Digite aqui sua mensagem"/>
+    </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:layout_marginTop="16dp"
+        android:id="@+id/enviarMensagem"
+        android:textStyle="bold"
+        android:textColor="#fff"
+        android:padding="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_button_home"
+        android:text="ENVIAR MENSAGEM"
+        android:drawableEnd="@drawable/ic_menu_send"/>
+
+
+
+</LinearLayout>

@@ -35,7 +35,7 @@
         <item
             android:id="@+id/nav_ferramentas"
             android:icon="@drawable/ic_menu_manage"
-            android:title="Ferramentas" />
+            android:title="Agendamentos" />
 
     </group>
 

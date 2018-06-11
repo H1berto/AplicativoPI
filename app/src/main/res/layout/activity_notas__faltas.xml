@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.rickt.fam.Activity.Notas_FaltasActivity"
+    android:padding="8dp">
+
+    <Spinner
+        android:id="@+id/spinnerSemestre"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginBottom="16dp"></Spinner>
+
+
+    <TextView
+        android:id="@+id/textViewSemestre"
+        android:visibility="gone"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="3°SEMESTRE"
+        android:background="@drawable/shape_button_home"
+        android:textColor="#fff"
+        android:textSize="20dp"/>
+
+    <LinearLayout
+        android:id="@+id/linearDesc"
+        android:visibility="gone"
+        android:layout_marginTop="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_marginRight="8dp"
+            android:background="@drawable/shape_button_home"
+            android:textColor="#fff"
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="wrap_content"
+            android:text="NOTA A1"/>
+
+
+        <TextView
+            android:layout_marginRight="8dp"
+            android:textColor="#fff"
+            android:background="@drawable/shape_button_home"
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="wrap_content"
+            android:text="NOTA A2"/>
+
+
+        <TextView
+            android:textColor="#fff"
+            android:background="@drawable/shape_button_home"
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="wrap_content"
+            android:text="FALTAS"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearNotas"
+        android:visibility="gone"
+        android:layout_marginTop="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_marginRight="8dp"
+            android:background="@drawable/shape_button_home"
+            android:textColor="#fff"
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="wrap_content"
+            android:text="2.50"/>
+
+
+        <TextView
+            android:layout_marginRight="8dp"
+            android:textColor="#fff"
+            android:background="@drawable/shape_button_home"
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="wrap_content"
+            android:text="3.00"/>
+
+
+        <TextView
+            android:textColor="#fff"
+            android:background="@drawable/shape_button_home"
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="wrap_content"
+            android:text="22"/>
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_gravity="center"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:visibility="gone"/>
+
+</LinearLayout>

@@ -32,7 +32,10 @@
         <activity android:name=".Activity.TurmasActivity" />
         <activity android:name=".Activity.Turma1Activity" />
         <activity android:name=".Activity.CadastroDeAlunoActivity" />
-        <activity android:name=".Activity.CadastroUsuarioActivity"></activity>
+        <activity android:name=".Activity.CadastroUsuarioActivity" />
+        <activity android:name=".Activity.Notas_FaltasActivity" />
+        <activity android:name=".Activity.AgendamentoActivity" />
+        <activity android:name=".Activity.EnviarMensagemActivity"></activity>
     </application>
 
 </manifest>

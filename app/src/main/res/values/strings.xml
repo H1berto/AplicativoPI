@@ -1,7 +1,6 @@
 <resources>
     <string name="app_name">FAM</string>
     <string name="title_activity_login">Sign in</string>
-
     <!-- Strings related to login -->
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password (optional)</string>
@@ -15,9 +14,59 @@
         completions."
     </string>
     <string name="title_activity_main2">Main2Activity</string>
-
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="action_settings">Settings</string>
+
+    <string-array name="semestre_array">
+        <item>1° SEMESTRE</item>
+        <item>2° SEMESTRE</item>
+        <item>3° SEMESTRE</item>
+    </string-array>
+
+    <string-array name="horarios_array">
+        <item>09:00</item>
+        <item>10:00</item>
+        <item>11:00</item>
+        <item>Período Integral</item>
+        <item>Nenhum</item>
+        <item>Hoje</item>
+    </string-array>
+
+    <string-array name="local_array">
+        <item>Laboratório de informática </item>
+        <item>Sala com internet</item>
+        <item>Co-working</item>
+        <item>Outros</item>
+    </string-array>
+
+    <string-array name="turmas_array">
+        <item>Ciência da computação - Manhã </item>
+        <item>Análise e desenvolvimento de sistemas - Manhã</item>
+        <item>Outros</item>
+    </string-array>
+
+    <string-array name="equipamento_array">
+        <item>Projetor</item>
+        <item>Notebook</item>
+        <item>Outros</item>
+        <item>Nenhum</item>
+    </string-array>
+
+    <string-array name="turma_mensagem_array">
+        <item>CC - Manhã (02134)</item>
+        <item>CC - Manhã (12345)</item>
+        <item>ADS - Manhã (20984)</item>
+    </string-array>
+
+    <string-array name="turma_alunos_array">
+        <item>000000</item>
+        <item>022228</item>
+        <item>022987</item>
+        <item>022647</item>
+        <item>142647</item>
+        <item>TODOS</item>
+    </string-array>
+
 </resources>

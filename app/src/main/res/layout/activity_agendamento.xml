@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.rickt.fam.Activity.AgendamentoActivity"
+    android:padding="8dp">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <TextView
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Agendamento"
+        android:textColor="@color/colorAccent"
+        android:textStyle="bold"
+        android:textSize="22dp"
+        android:layout_marginBottom="15dp"/>
+
+    <TextView
+        android:id="@+id/horarioAgendamento"
+        android:layout_marginBottom="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Horário:"
+        android:textColor="@color/colorAccent"
+        android:textStyle="bold"
+        android:textSize="16dp"/>
+    <Spinner
+        android:id="@+id/spinnerHorarios"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"></Spinner>
+
+    <TextView
+        android:id="@+id/turmaAgendamento"
+        android:layout_marginBottom="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Turma:"
+        android:textColor="@color/colorAccent"
+        android:textStyle="bold"
+        android:textSize="16dp"/>
+    <Spinner
+        android:id="@+id/spinnerTurma"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"></Spinner>
+
+    <TextView
+        android:id="@+id/localAgendamento"
+        android:layout_marginBottom="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Local:"
+        android:textColor="@color/colorAccent"
+        android:textStyle="bold"
+        android:textSize="16dp"/>
+    <Spinner
+        android:id="@+id/spinnerLocal"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"></Spinner>
+
+    <TextView
+        android:id="@+id/equipamentoAgendamento"
+        android:layout_marginBottom="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Equipamento:"
+        android:textColor="@color/colorAccent"
+        android:textStyle="bold"
+        android:textSize="16dp"/>
+    <Spinner
+        android:id="@+id/spinnerEquipamento"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"></Spinner>
+
+    <Button
+        android:id="@+id/buttonConfirmarAgendamento"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="CONFIRMAR"
+        android:background="@drawable/shape_button_home"
+        android:textColor="#fff"
+        android:textSize="17dp"/>
+
+    <Button
+        android:id="@+id/buttonAgendamento"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="AGENDAR"
+        android:background="@drawable/shape_button_home"
+        android:textColor="#fff"
+        android:textSize="17dp"
+        android:visibility="gone"/>
+
+    <TextView
+        android:visibility="gone"
+        android:background="@drawable/shape_nao"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:id="@+id/cancelarAgendamento"
+        android:layout_marginBottom="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="CANCELAR"
+        android:textColor="#fff"
+        android:textStyle="bold"
+        android:textSize="16dp"/>
+
+    </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

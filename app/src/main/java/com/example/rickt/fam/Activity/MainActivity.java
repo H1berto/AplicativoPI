@@ -14,7 +14,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
-import android.widget.EditText;
 import android.widget.TextView;
 
 import com.example.rickt.fam.R;
@@ -24,6 +23,9 @@ public class MainActivity extends AppCompatActivity
 
 	private WebView webView;
 	private TextView setName;
+	private TextView nomeCompletoNav;
+	private TextView emailNav;
+	private TextView raNav;
 
 	private String nomeUser;
 	private String emailUser;
@@ -46,6 +48,9 @@ public class MainActivity extends AppCompatActivity
 		nomeUser = it.getStringExtra ("nomeUser");
 		isAlunoUser = it.getBooleanExtra ("isAluno", false);
 
+		nomeCompletoNav = (TextView) findViewById (R.id.textViewNomeUserCompletoNavHeader);
+		emailNav = (TextView) findViewById (R.id.textViewEmailUserNavHeader);
+		raNav = (TextView) findViewById (R.id.textViewRANavHeader);
 		setName = (TextView) findViewById (R.id.textViewBemVindoUser);
 		webView = (WebView) findViewById (R.id.webViewToSetVideo);
 		webView.setWebViewClient (new MyBrowser());
@@ -128,11 +133,30 @@ public class MainActivity extends AppCompatActivity
 
 		} else if (id == R.id.nav_material_de_apoio) {
 
-		} else if (id == R.id.nav_share) {
+		} else if (id == R.id.nav_ferramentas) {
+
+			if (isAlunoUser == false){
+
+				Intent intent = new Intent (MainActivity.this, AgendamentoActivity.class);
+				startActivity (intent);
+			}else {
+				showDialog();
+			}
+
 
 		} else if (id == R.id.nav_send) {
 
+			Intent it = new Intent (getApplicationContext (), EnviarMensagemActivity.class);
+			startActivity (it);
+
 		} else if (id == R.id.nav_presenca) {
+
+			if(isAlunoUser == true){
+
+				Intent it = new Intent (getApplicationContext (), Notas_FaltasActivity.class);
+				startActivity (it);
+
+			} else {showDialogAluno ();}
 
 		}
 		else if (id == R.id.nav_classes) {
@@ -142,12 +166,8 @@ public class MainActivity extends AppCompatActivity
 				Intent intent = new Intent (MainActivity.this, TurmasActivity.class);
 				startActivity (intent);
 			}else {
-				dialog = new Dialog (this);
-				dialog.setContentView (R.layout.custom_dialog);
-				dialog.setCancelable (false);
-				dialog.show ();
+				showDialog();
 			}
-
 
 		}
 
@@ -162,5 +182,38 @@ public class MainActivity extends AppCompatActivity
 			view.loadUrl (url);
 			return true;
 		}
+	}
+	private void showDialog(){
+		dialog = new Dialog (this);
+
+			dialog.setContentView (R.layout.custom_acess_dialog);
+
+		dialog.findViewById (R.id.buttonOKAlerta).setOnClickListener (new View.OnClickListener () {
+			@Override
+			public void onClick (View v) {
+				dialog.dismiss ();
+			}
+		});
+		dialog.setCancelable (false);
+		dialog.show ();
+
+	}
+	private void showDialogAluno(){
+		dialog = new Dialog (this);
+		if (isAlunoUser == true ){
+			dialog.setContentView (R.layout.custom_acess_aluno_dialog);
+		} else{
+			dialog.setContentView (R.layout.custom_acess_dialog);
+		}
+
+		dialog.findViewById (R.id.buttonOKAlertaAluno).setOnClickListener (new View.OnClickListener () {
+			@Override
+			public void onClick (View v) {
+				dialog.dismiss ();
+			}
+		});
+		dialog.setCancelable (false);
+		dialog.show ();
+
 	}
 }

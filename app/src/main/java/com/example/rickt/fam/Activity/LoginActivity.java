@@ -1,11 +1,13 @@
 package com.example.rickt.fam.Activity;
 
 import android.content.Intent;
+import android.os.CountDownTimer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.example.rickt.fam.R;
@@ -17,6 +19,9 @@ public class LoginActivity extends AppCompatActivity {
 	private Button btnLogin;
 	private TextView tvErro;
 	private TextView tvCadastro;
+	private ProgressBar progressBarLogin;
+
+	private CountDownTimer countDownTimer;
 
 	private String varRA = "022228";
 	private String varSenha = "123456";
@@ -43,11 +48,27 @@ public class LoginActivity extends AppCompatActivity {
 		btnLogin = (Button) findViewById (R.id.btnLogin);
 		tvErro = (TextView) findViewById (R.id.tvMensagemErro);
 		tvCadastro = (TextView) findViewById (R.id.tvCadastroNovoUser);
+		progressBarLogin = (ProgressBar) findViewById (R.id.progressBarLogin);
 
 		btnLogin.setOnClickListener (new View.OnClickListener () {
 			@Override
 			public void onClick (View v) {
-			doLogin ();
+
+				countDownTimer = new CountDownTimer (5000, 1000) {
+					@Override
+					public void onTick (long millisUntilFinished) {
+						progressBarLogin.setVisibility (View.VISIBLE);
+						btnLogin.setVisibility (View.GONE);
+					}
+
+					@Override
+					public void onFinish () {
+						doLogin ();
+					}
+				};
+
+				countDownTimer.start ();
+
 			}
 		});
 
@@ -74,7 +95,9 @@ public class LoginActivity extends AppCompatActivity {
 			intent.putExtra ("raUser", varRA);
 			intent.putExtra ("isAluno", isAluno);
 			startActivity (intent);
-		} else { tvErro.setVisibility (View.VISIBLE);
+		} else {
+			progressBarLogin.setVisibility (View.GONE);
+			tvErro.setVisibility (View.VISIBLE);
 			tvErro.setText ("Acesso negado.");}
 	}
 
